@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Graphics datas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    <h1><b>CLP</b> Information</h1>
+    <h3>Aqui as informações vão até você!</h3>
+    <div id="middle">
+      <ul>
+        <h2>Histórico de mudanças</h2>
+        <div id="middle_in">
+          <li>Sensor: {{ clp_information.Sensor }}</li>
+          <li>Botão: {{ clp_information.Botao }}</li>
+          <li>Liga Robô: {{ clp_information.LigaRobo }}</li>
+        </div>
+        <div id="middle_under">
+          <li>Reset Contador: {{ clp_information.ResetContador }}</li>
+          <li>Valor Contagem: {{ clp_information.ValorContagem }}</li>
+        </div>
+      </ul>
+    </div>
+  </body>
+  <style>
+    /* Reset de estilos padrão */
+    body,
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    h1,
+    h2 {
+      color: #fb0000be;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      padding: 20px;
+    }
+
+    #middle {
+      max-width: 800px;
+      margin: auto;
+      justify-content: center;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    #middle_in,
+    #middle_under {
+      display: flex;
+      justify-content: center;
+      gap: 10%;
+      padding-bottom: 5%;
+      padding-top: 5%;
+    }
+
+    #middle_under {
+      border-top: 1px solid #fb00009c;
+      padding-top: 5%;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 10px 0;
+    }
+  </style>
+</html>
